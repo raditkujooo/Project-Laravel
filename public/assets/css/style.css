@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppints', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #850F8D;
+    color: #ededed;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: pink;
+}
+
+.home {
+    height: 700px;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 600px;
+
+}
+
+.home-content h1 {
+    font-size: 35px;
+    font-weight: 700;
+    list-style: 1.2;
+
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: pink;
+}
+
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 330px;
+    height: 40px;
+}
+
+.btn-box a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: pink;
+    border: 2px solid pink;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+    padding: 10px;
+}
+
+.btn-box a:hover {
+    color: pink;
+}
+
+.btn-box a:nth-child(2) {
+    background: transparent;
+    color: white;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: pink;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #C738BD;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #C738BD;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #C738BD;
+    padding-bottom: 6rem;
+}
+
+.heading {
+    font-size: 45px;
+    text-align: center;
+}
+
+span {
+    color: pink;
+}
+
+
+.about-foto {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-foto img {
+    width: 90%;
+    border-radius: 50%;
+    border: .2rem solid pink;
+}
+
+.about-foto .cc-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid purple;
+    border-bottom: .2rem solid purple;
+    border-left: .2rem solid pink;
+    border-right: .2rem solid pink;
+}
+
+.about-content {
+    text-align: center;
+}
+
+.about-content h3 {
+    font-size: 35px;
+}
+
+.about-content p {
+    font-size: 18px;
+    margin: 20px 0 20px;
+}
+
+.skils {
+    padding-bottom: 7rem;
+    background: #850F8D;
+}
+
+.skils .skils-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+}
+
+.skils-row .skils-column {
+    flex: 1 1 40rem;
+
+}
+
+.skils-column .title {
+    font-size: 2, 5rem;
+    margin: 0 0 1.5rem;
+}
+
+.skils-box {
+    position: relative;
+    border: .2rem solid pink;
+    border-radius: .6rem;
+    padding: .5rem 1.5rem;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+.skils-content .progress {
+    padding: 1rem 0;
+}
+
+.skils-content .progress h3 {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skils-content .progress h3 span {
+    color: #ededed;
+}
+
+.skils-content .progress .bar {
+    height: 2.5rem;
+    border-radius: .6rem;
+    border: .2rem solid;
+    padding: .5rem;
+    margin: 1rem 0;
+}
+
+.skils-content .progress .bar span {
+    display: block;
+    height: 100%;
+    border-radius: .3rem;
+    background: white;
+}
+
+.skils-column:nth-child(1) .skils-content .progress:nth-child(1) .bar span {
+    width: 50%;
+}
+
+.skils-column:nth-child(1) .skils-content .progress:nth-child(2) .bar span {
+    width: 35%;
+}
+
+.skils-column:nth-child(1) .skils-content .progress:nth-child(3) .bar span {
+    width: 5%;
+}
